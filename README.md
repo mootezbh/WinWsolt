@@ -20,7 +20,7 @@ A modern movie tracker app built with React, Clerk authentication, TanStack Quer
 ### 1. Clone the repo
 
 ```sh
-git clone [https://github.com/your-username/winwsolt.git](https://github.com/mootezbh/WinWsolt.git)
+git clone https://github.com/mootezbh/WinWsolt.git
 cd winwsolt
 ```
 
