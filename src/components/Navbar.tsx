@@ -33,6 +33,7 @@ const Navbar = () => {
             </Link>
           </div>
 
+          {/* Desktop Nav */}
           <div className="hidden md:block">
             <SignedIn>
               <div className="ml-10 flex items-center space-x-4">
@@ -45,6 +46,26 @@ const Navbar = () => {
                 <Link
                   to="/my-movies"
                   className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >
+                  My List
+                </Link>
+              </div>
+            </SignedIn>
+          </div>
+
+          {/* Mobile Nav */}
+          <div className="md:hidden">
+            <SignedIn>
+              <div className="flex items-center space-x-4">
+                <Link
+                  to="/movies"
+                  className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors block py-2"
+                >
+                  Movies
+                </Link>
+                <Link
+                  to="/my-movies"
+                  className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors block py-2"
                 >
                   My List
                 </Link>
