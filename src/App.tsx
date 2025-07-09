@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import MovieDetailsPage from "./pages/MovieDetailsPage";
 import { SonnerToaster } from "./components/ui/sonner-provider";
+import Spinner from "./components/ui/spinner";
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { isSignedIn, isLoaded } = useAuth();
@@ -18,11 +19,13 @@ function App() {
   return (
     <>
       <SonnerToaster />
-      <Navbar />
       <ClerkLoading>
-        <div className="text-center mt-16">Loading...</div>
+        <div className="flex items-center justify-center min-h-screen">
+          <Spinner />
+        </div>
       </ClerkLoading>
       <ClerkLoaded>
+        <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route
